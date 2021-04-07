@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {  } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'page-login',
@@ -8,8 +8,13 @@ import {  } from '@angular/forms';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  
+  loading: boolean = false;
+  myForm: FormGroup;
+  sUserID: FormControl;
+  sPassword: FormControl;
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, private fb: FormBuilder) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
