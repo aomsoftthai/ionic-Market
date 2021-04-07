@@ -14,29 +14,28 @@ import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 import { ProfilePage } from '../pages/profile/profile';
 import { LoginPage } from '../pages/login/login';
+import { HomePage } from '../pages/home/home';
+import { DashboardPage } from '../pages/dashboard/dashboard';
+
+const _Component = [
+  MyApp,
+  HelloIonicPage,
+  ItemDetailsPage,
+  ListPage,
+  ProfilePage,
+  LoginPage,
+  HomePage,
+  DashboardPage
+];
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage,
-    ProfilePage,
-    LoginPage
-  ],
+  declarations: _Component,
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage,
-    ProfilePage,
-    LoginPage
-  ],
+  entryComponents: _Component,
   providers: [
     StatusBar,
     SplashScreen,

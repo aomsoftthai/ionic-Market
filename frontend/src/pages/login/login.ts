@@ -3,6 +3,9 @@ import { NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { CommonNg } from '../../providers/providers';
 
+/* Component */
+import { HelloIonicPage } from '../hello-ionic/hello-ionic';
+import { HomePage } from '../home/home';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
@@ -30,8 +33,12 @@ export class LoginPage {
   }
 
   onLogin() {
+    /* Form Data */
     const { value } = this.myForm;
     console.log(`onLogin`, value);
+
+    /* Route Path */
+    this.navCtrl.push(HelloIonicPage);
   }
 
 }
