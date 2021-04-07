@@ -17,6 +17,8 @@ import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { AboutUsPage } from '../pages/about-us/about-us';
+import { FavoritePage } from '../pages/favorite/favorite';
+import { ProductPage } from '../pages/product/product';
 
 const _Component = [
   MyApp,
@@ -27,7 +29,9 @@ const _Component = [
   LoginPage,
   HomePage,
   DashboardPage,
-  AboutUsPage
+  AboutUsPage,
+  FavoritePage,
+  ProductPage
 ];
 
 @NgModule({ 

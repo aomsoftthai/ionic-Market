@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+/* Component */
 import { AboutUsPage } from '../about-us/about-us';
+import { ProductPage } from '../product/product';
+import { FavoritePage } from '../favorite/favorite';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -12,7 +16,9 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.chips = [
-      { item: 1, title: "About Us", page: AboutUsPage }
+      { item: 1, title: "About Us", page: AboutUsPage },
+      { item: 2, title: "Product", page: ProductPage },
+      { item: 3, title: "Favorite", page: FavoritePage },
     ];
 
     this.cards = [];
@@ -30,8 +36,6 @@ export class HomePage {
   }
 
   onClickChip(item) {
-    console.log(`onClickChip`, item);
-
     !!item.page && this.navCtrl.push(item.page);
   }
 
