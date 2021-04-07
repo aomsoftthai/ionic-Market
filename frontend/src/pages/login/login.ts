@@ -19,13 +19,19 @@ export class LoginPage {
     this.sUserID = this.fb.control('', Validators.required);
     this.sPassword = this.fb.control('', Validators.required);
 
-    this.myForm = this.fb.group({ 'sUserID': this.sUserID, 'sPassword': this.sPassword });
+    this.myForm = this.fb.group({
+      'sUserID': this.sUserID,
+      'sPassword': this.sPassword
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  onLogin() { }
+  onLogin() {
+    const { value } = this.myForm;
+    console.log(`onLogin`, value);
+  }
 
 }

@@ -4,7 +4,8 @@ import {
     AlertController, Alert, AlertButton, AlertOptions,
     LoadingController, Loading, LoadingOptions,
     ToastController, Toast, ToastOptions,
-    ModalController, Modal, ModalOptions,
+    ModalController, Modal, 
+    // ModalOptions,
     Platform
 } from 'ionic-angular';
 import { AlertInputOptions } from 'ionic-angular/components/alert/alert-options';

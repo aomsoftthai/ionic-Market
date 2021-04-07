@@ -11,10 +11,19 @@
 </ion-header>
 
 <ion-content padding>
-
-  <!-- <ion-item>
-    <ion-label position="floating">Floating Label</ion-label>
-    <ion-input></ion-input>
-  </ion-item> -->
-
+  <form novalidate [formGroup]="myForm" (ngSubmit)="onLogin()">
+    <ion-item>
+      <ion-label position="fixed">User ID</ion-label>
+      <ion-input formControlName="sUserID"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Password</ion-label>
+      <ion-input type="password" formControlName="sPassword"></ion-input>
+    </ion-item>
+    <div padding>
+      <button ion-button block color="primary" type="submit" round>
+        Login
+      </button>
+    </div>
+  </form>
 </ion-content>
