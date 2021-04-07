@@ -14,7 +14,7 @@
   <ion-searchbar></ion-searchbar>
 
   <ion-chip *ngFor="let item of chips">
-    <ion-label (click)="onClickChip(item)">{{item}}</ion-label>
+    <ion-label (click)="onClickChip(item)">{{item.title}}</ion-label>
   </ion-chip>
 
   <ion-grid>
@@ -27,5 +27,6 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+  
 
 </ion-content>
