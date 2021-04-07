@@ -11,6 +11,7 @@ import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { ProfilePage } from '../pages/profile/profile';
 import { LoginPage } from '../pages/login/login';
+import { DashboardPage } from '../pages/dashboard/dashboard';
 
 @Component({
   templateUrl: 'app.html'
@@ -32,6 +33,7 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
+      { title: 'Dashboard', component: DashboardPage },
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
       { title: 'Profile', component: ProfilePage },

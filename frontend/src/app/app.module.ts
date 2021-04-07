@@ -16,6 +16,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { DashboardPage } from '../pages/dashboard/dashboard';
+import { AboutUsPage } from '../pages/about-us/about-us';
 
 const _Component = [
   MyApp,
@@ -25,10 +26,11 @@ const _Component = [
   ProfilePage,
   LoginPage,
   HomePage,
-  DashboardPage
+  DashboardPage,
+  AboutUsPage
 ];
 
-@NgModule({
+@NgModule({ 
   declarations: _Component,
   imports: [
     BrowserModule,

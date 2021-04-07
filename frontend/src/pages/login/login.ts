@@ -5,7 +5,6 @@ import { CommonNg } from '../../providers/providers';
 
 /* Component */
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';
-import { HomePage } from '../home/home';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
