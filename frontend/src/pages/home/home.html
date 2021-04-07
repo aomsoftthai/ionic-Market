@@ -11,18 +11,18 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-searchbar></ion-searchbar>
+
+  <ion-chip *ngFor="let item of chips">
+    <ion-label (click)="onClickChip(item)">{{item}}</ion-label>
+  </ion-chip>
+
   <ion-grid>
     <ion-row>
-      <ion-col size="6">
-        <strong>label 1</strong>
+      <ion-col *ngFor="let item of cards" size="6">
+        <strong>{{item.title}}</strong>
         <ion-card>
-          <strong>1</strong>
-        </ion-card>
-      </ion-col>
-      <ion-col size="6">
-        <strong>label 1</strong>
-        <ion-card>
-          <strong>2</strong>
+          <strong>{{item.content}}</strong>
         </ion-card>
       </ion-col>
     </ion-row>
