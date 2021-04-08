@@ -13,7 +13,7 @@ import { AlertInputOptions } from 'ionic-angular/components/alert/alert-options'
 @Injectable()
 export class CommonNg {
     isCordova: boolean = false;
-    isiOS: boolean = false;
+    isiOS: boolean = false; 
     isAndroid: boolean = false;
 
 
