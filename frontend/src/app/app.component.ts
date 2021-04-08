@@ -12,6 +12,7 @@ import { ListPage } from '../pages/list/list';
 import { ProfilePage } from '../pages/profile/profile';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { HomePage } from '../pages/home/home';
+import { SigninPage } from '../pages/signin/signin';
 
 @Component({
   templateUrl: 'app.html'
@@ -36,6 +37,7 @@ export class MyApp {
       { title: 'Dashboard', component: DashboardPage },
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
+      { title: 'Sign In', component: SigninPage },
       { title: 'Profile', component: ProfilePage },
     ];
   }

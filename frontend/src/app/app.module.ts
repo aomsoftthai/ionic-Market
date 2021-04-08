@@ -19,6 +19,7 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
 import { AboutUsPage } from '../pages/about-us/about-us';
 import { FavoritePage } from '../pages/favorite/favorite';
 import { ProductPage } from '../pages/product/product';
+import { SigninPage } from '../pages/signin/signin';
 
 const _Component = [
   MyApp,
@@ -31,7 +32,8 @@ const _Component = [
   DashboardPage,
   AboutUsPage,
   FavoritePage,
-  ProductPage
+  ProductPage,
+  SigninPage
 ];
 
 @NgModule({ 
