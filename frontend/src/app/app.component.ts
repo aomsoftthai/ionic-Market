@@ -12,7 +12,7 @@ import { ListPage } from '../pages/list/list';
 import { ProfilePage } from '../pages/profile/profile';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { HomePage } from '../pages/home/home';
-import { SigninPage } from '../pages/signin/signin';
+import { LoginPage } from '../pages/login/login';
 
 @Component({
   templateUrl: 'app.html'
@@ -35,9 +35,10 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Dashboard', component: DashboardPage },
+      { title: 'Home', component: HomePage },
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
-      { title: 'Sign In', component: SigninPage },
+      { title: 'Login', component: LoginPage },
       { title: 'Profile', component: ProfilePage },
     ];
   }

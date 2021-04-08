@@ -5,6 +5,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 
 /* Component */
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';
+import { SigninPage } from '../signin/signin';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
@@ -38,6 +39,10 @@ export class LoginPage {
 
     /* Route Path */
     this.navCtrl.push(HelloIonicPage);
+  }
+
+  onSingIn() {
+    this.navCtrl.push(SigninPage);
   }
 
 }
