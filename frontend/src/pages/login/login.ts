@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { CommonNg } from '../../providers/providers';
+// import { CommonNg } from '../../providers/providers';
 
 /* Component */
 import { HelloIonicPage } from '../hello-ionic/hello-ionic';

@@ -1,14 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the SigninPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-@IonicPage()
+import { NavController, NavParams } from 'ionic-angular';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+// import { CommonNg } from '../../providers/providers';
 @Component({
   selector: 'page-signin',
   templateUrl: 'signin.html',
