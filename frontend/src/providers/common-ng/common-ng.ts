@@ -4,8 +4,7 @@ import {
     AlertController, Alert, AlertButton, AlertOptions,
     LoadingController, Loading, LoadingOptions,
     ToastController, Toast, ToastOptions,
-    ModalController, Modal,
-    // ModalOptions,
+    ModalController, Modal, ModalOptions,
     Platform
 } from 'ionic-angular';
 import { AlertInputOptions } from 'ionic-angular/components/alert/alert-options';
@@ -82,8 +81,45 @@ export class CommonNg {
     }
 
     /*=====  Loading Controller =====*/
+    getLoading(content?: string, spinner?: string): Loading {
+        let loadingOptions: LoadingOptions = {};
+        loadingOptions.content = !this.isEmpty(content) ? content : "Please wait...";
+
+        if (!this.isEmpty(spinner)) loadingOptions.spinner = spinner;
+
+        let loading = this.loadingCtrl.create(loadingOptions);
+        return loading;
+    }
+
+    /*=====  Toast Controller =====*/
+    getToast(message: string, position?: string, duration?: number): Toast {
+        let toastOptions: ToastOptions = {};
+        toastOptions.message = message;
+        toastOptions.position = !this.isEmpty(position) ? position : "bottom";
+        toastOptions.duration = !this.isEmpty(duration) ? duration : 3000;
+
+        if (!this.isEmpty(duration)) toastOptions.duration = duration;
+
+        let toast = this.toastCtrl.create(toastOptions);
+        return toast;
+    }
+
+    /*=====  Modal Controller =====*/
+    getModal(component: any, data?: any, opts?: ModalOptions): Modal {
+        let modal = this.modalCtrl.create(component, data, opts || { showBackdrop: false, enableBackdropDismiss: false });
+        return modal;
+    }
 
     /*===== Utility Function  =====*/
     isEmpty(obj): boolean { return (obj || '') == ''; }
 
+    reInjectDate() { }
+
+    convertStrDateToDate() { }
+
+    convertStrToInteger() { }
+
+    convertStrToNumber() { }
+
+    getMonth() { }
 }
