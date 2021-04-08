@@ -11,6 +11,7 @@ export class SigninPage {
   loading: boolean = false;
   myForm: FormGroup;
   sUserID: FormControl;
+  sPassword: FormControl;
   sFirstName: FormControl;
   sLastName: FormControl;
   nAge: FormControl;
@@ -19,12 +20,14 @@ export class SigninPage {
 
     /* Validators Schema */
     this.sUserID = this.fb.control('', Validators.required);
+    this.sPassword = this.fb.control('', Validators.required);
     this.sFirstName = this.fb.control('', Validators.required);
     this.sLastName = this.fb.control('', Validators.required);
-    this.nAge = this.fb.control(0, Validators.required);
+    this.nAge = this.fb.control('', Validators.required);
 
     this.myForm = this.fb.group({
       'sUserID': this.sUserID,
+      'sPassword': this.sPassword,
       'sFirstName': this.sFirstName,
       'sLastName': this.sLastName,
       'nAge': this.nAge,
@@ -37,7 +40,8 @@ export class SigninPage {
 
 
   onSuubmit() {
-    console.log(`onSuubmit`);
+    const { value } = this.myForm;
+    console.log(`onSuubmit`, value);
   }
 
 }
