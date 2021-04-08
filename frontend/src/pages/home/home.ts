@@ -4,6 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { AboutUsPage } from '../about-us/about-us';
 import { ProductPage } from '../product/product';
 import { FavoritePage } from '../favorite/favorite';
+import { ProfilePage } from '../profile/profile';
 
 @Component({
   selector: 'page-home',
@@ -19,6 +20,7 @@ export class HomePage {
       { item: 1, title: "About Us", page: AboutUsPage },
       { item: 2, title: "Product", page: ProductPage },
       { item: 3, title: "Favorite", page: FavoritePage },
+      { item: 4, title: "Profile", page: ProfilePage },
     ];
 
     this.cards = [];

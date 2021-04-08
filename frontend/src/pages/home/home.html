@@ -8,7 +8,7 @@
   <ion-searchbar></ion-searchbar>
 
   <ion-chip *ngFor="let item of chips">
-    <ion-label (click)="onClickChip(item)">{{item.title}}</ion-label>
+    <ion-label class="chip" (click)="onClickChip(item)">{{item.title}}</ion-label>
   </ion-chip>
 
   <ion-grid>
