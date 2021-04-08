@@ -11,5 +11,7 @@
 </ion-header>
 
 <ion-content padding>
-
+  <form novalidate [formGroup]="myForm" (ngSubmit)="onSuubmit()">
+    <strong>Sign In</strong>
+  </form>
 </ion-content>

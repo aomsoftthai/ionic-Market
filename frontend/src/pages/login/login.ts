@@ -31,10 +31,10 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  onLogin() {
+  onSuubmit() {
     /* Form Data */
     const { value } = this.myForm;
-    console.log(`onLogin`, value);
+    console.log(`onSuubmit`, value);
 
     /* Route Path */
     this.navCtrl.push(HelloIonicPage);
