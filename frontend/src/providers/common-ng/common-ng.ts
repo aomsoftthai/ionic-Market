@@ -43,7 +43,45 @@ export class CommonNg {
     }
 
     /*=====  Alert Controller =====*/
-    
+    getAlert(title: string, subTitle?: string, message?: string, buttons?: AlertButton[] | string, inputs?: AlertInputOptions[]): Alert {
+        let alertOption: AlertOptions = {};
+        alertOption.title = title;
+
+        if (!this.isEmpty(subTitle)) alertOption.subTitle = subTitle;
+        if (!this.isEmpty(message)) alertOption.message = message;
+        if (typeof buttons == "object" && buttons.length > 0) alertOption.buttons = buttons;
+        else if (typeof buttons == "string") alertOption.buttons = [buttons];
+        else alertOption.buttons = ["Dismiss"];
+
+        if (!this.isEmpty(inputs) && inputs.length > 0) alertOption.inputs = inputs;
+
+        let alert = this.alertCtrl.create(alertOption);
+        return alert;
+    }
+
+    createAlertButton(text: string, hander: any, role?: string, cssClass?: string): AlertButton {
+        let alertButton: AlertButton = {};
+        alertButton.text = text;
+        alertButton.handler = hander;
+
+        if (!this.isEmpty(role)) alertButton.role = role;
+        if (!this.isEmpty(cssClass)) alertButton.cssClass = cssClass;
+
+        return alertButton;
+    }
+
+    createAlertInputOptions(name: string, handler: any, placeholder?: string, type?: string): AlertInputOptions {
+        let alertInputOptions: AlertInputOptions = {};
+        alertInputOptions.name = name;
+        alertInputOptions.handler = handler;
+
+        if (!this.isEmpty(placeholder)) alertInputOptions.placeholder = placeholder;
+        if (!this.isEmpty(type)) alertInputOptions.type = type;
+
+        return alertInputOptions;
+    }
+
+    /*=====  Loading Controller =====*/
 
     /*===== Utility Function  =====*/
     isEmpty(obj): boolean { return (obj || '') == ''; }
